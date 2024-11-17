@@ -7,5 +7,3 @@ def count_str(array):
 #can count length of each item in array (if it is strings)
      
 print(count_str(['ab','c','def','ghij']))
-        
-        
