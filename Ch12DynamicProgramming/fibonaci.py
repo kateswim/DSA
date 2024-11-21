@@ -1,7 +1,6 @@
 import time
 
-
-# just stupid repetitive rcursion
+# just stupid repetitive recursion
 def rfib(n):
     if n ==0:
         return 0
