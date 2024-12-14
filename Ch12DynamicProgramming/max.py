@@ -1,9 +1,5 @@
 import time
 
-# start_time = time.time()
-
-# print("--- %s seconds ---" % (time.time() - start_time))
-
 no_of_calculation = 0
 
 # max with recursion (not optimized)
