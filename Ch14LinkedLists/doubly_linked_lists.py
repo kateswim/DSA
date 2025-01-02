@@ -1,12 +1,12 @@
 class Node():
-    def __init__(self,data,next_node, previous_node):
+    def __init__(self,data,next_node,previous_node):
         self.data=data
         self.next_node=next_node
         self.previous_node=previous_node
 
 
 def insert_at_end(current_node,value):
-    new_node=Node(data=value,next_node=None, previous_node=None)
+    new_node=Node(data=value,next_node=None,previous_node=None)
     while current_node!=None and current_node.next_node!=None:
         current_node=current_node.next_node
     current_node.next_node=new_node #forward link
