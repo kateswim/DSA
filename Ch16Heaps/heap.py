@@ -74,4 +74,13 @@ def ChangePriority(i,p):
         SiftDown(i)
 
 
-
+insert(7)
+insert(90)
+insert(33)
+insert(77)
+insert(100)
+print(H)
+print(maxSize)
+Remove(90)
+Remove(33)
+print(H)
