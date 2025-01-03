@@ -8,20 +8,17 @@ infinity = math.inf
 #negative_infinity = -math.inf
 
 def Parent(i):
-    return i//2
+    return (i-1)//2
 
 def LeftChild(i):
-    return 2*i
+    return (i*2)+1
 
 def RightChild(i):
-    return (2*i)+1
+    return (i*2)+2
 
 def SiftUp(i):
-    while i>1 and H[Parent(i)]< H[i]:
-        # swap H[Parent(i)] and H[i]
-        placeholder = H[Parent(i)]
-        H[Parent(i)] = H[i]
-        H[i] = placeholder
+    while i>0 and H[Parent(i)]< H[i]:
+        H[Parent(i)], H[i] = H[i], H[Parent(i)]
         i = Parent(i)
 
 def SiftDown(i):
@@ -36,9 +33,7 @@ def SiftDown(i):
         maxIndex = r
     if i != maxIndex:
         # swap H[i] and H[maxIndex]
-        placeholder = H[maxIndex]
-        H[maxIndex] = H[i]
-        H[i] = placeholder
+        H[i], H[maxIndex] = H[maxIndex], H[i]
         SiftDown(maxIndex)
 
 def insert(p):
@@ -47,20 +42,23 @@ def insert(p):
     if size==maxSize:
         print("Error its all full!")
         return 
-    size = size +1
+    size+=1
     H[size]= p
     SiftUp(size)
 
 def ExtractMax():
     global size
-    global maxSize
-    result = H[1]
-    H[1] = H[size]
-    size = size -1
-    SiftDown(1)
+    result = H[0]
+    H[0] = H[size-1] #because we have 0 based array
+    size-=1
+    SiftDown(0)
     return result
 
 def Remove(i):
+    global size
+    if i < 0 or i >= size:
+        raise IndexError("Index out of bounds")
+    
     H[i] = infinity
     SiftUp(i)
     ExtractMax()
@@ -81,6 +79,6 @@ insert(77)
 insert(100)
 print(H)
 print(maxSize)
-Remove(90)
-Remove(33)
+Remove(2)
+Remove(1)
 print(H)
