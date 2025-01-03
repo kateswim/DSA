@@ -54,18 +54,20 @@ def insert(p):
 def ExtractMax():
     global size
     global maxSize
-    result = H[1]
+    result = H[1] #test if this needs H[0]
     H[1] = H[size]
     size = size -1
     SiftDown(1)
     return result
 
 def Remove(i):
+    global H
     H[i] = infinity
     SiftUp(i)
     ExtractMax()
 
 def ChangePriority(i,p):
+    global H
     oldp = H[i]
     H[i] = p
     if p > oldp:
