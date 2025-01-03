@@ -8,13 +8,13 @@ infinity = math.inf
 #negative_infinity = -math.inf
 
 def Parent(i):
-    return i//2
+    return (i-1)//2
 
 def LeftChild(i):
-    return 2*i
+    return (2*i)+1
 
 def RightChild(i):
-    return (2*i)+1
+    return (2*i)+2
 
 def SiftUp(i):
     while i>1 and H[Parent(i)]< H[i]:
