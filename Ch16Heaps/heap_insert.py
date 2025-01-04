@@ -1,9 +1,9 @@
-class Heap():
-    def __init__(self,data=None):
+class Heap:
+    def __init__(self, data=None):
         if data:
-            self.data=data
+            self.data = data
         else:
-            return []
+            self.data = []
     
     def root_node(self):
         if self.data:
