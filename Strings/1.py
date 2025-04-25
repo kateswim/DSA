@@ -11,8 +11,6 @@ adj_list = {
     0:[],   
 }
 
-#print(adj_list)
-
 def lookup_in_adj_list(letter, key):
     for item in adj_list[key]:
         if item[1] == letter:

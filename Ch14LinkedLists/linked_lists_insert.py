@@ -25,7 +25,6 @@ def insert_at_end(current_node,value):
     current_node.next_node=new_node
 
 
-
 def insert_at_end_2(current_node,value):
     new_node=Node(data=value,next_node=None)
     while current_node!=None:
@@ -40,7 +39,6 @@ def list_all(current_node):
         print(f"current index: {current_index} and current_node.data: {current_node.data}")
         current_node=current_node.next_node
         current_index+=1
-
 
 
 ll=Node(1,None)

@@ -9,7 +9,6 @@ def even_num(array1,array2=[]):
     
     return array2
     
- 
    
     
 print(even_num([1,5,8,10,20,4,7,0,-1,-76,-456,390]))
