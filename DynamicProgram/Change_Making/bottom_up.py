@@ -44,9 +44,10 @@ def simplest_change(coins, amount):
             if next_paid not in solutions:
                 solutions[next_paid] = solution + [coin]
                 amounts_to_be_handled.append(next_paid)
+                print(amounts_to_be_handled)
 
     return None
 
 coins = [2, 5, 10] 
-amount = 15
+amount = 27
 print(simplest_change(coins, amount))
