@@ -29,3 +29,5 @@ def pair_sum_sorted(list, start:int, target:int):
 
     return pairs
 
+list = [-1, 0, 1, 2, -1, -4]
+print(triplet_sum(list)) 
