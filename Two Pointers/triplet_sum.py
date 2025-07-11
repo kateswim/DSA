@@ -1,30 +1,31 @@
-def triplet_sum(list):
-    list.sort()
+def triplet_sum(nums:list):
+    nums.sort()
     triplets = []
-    for i in range(len(list)):
-        if list[i] > 0: # means that if first number positive (> 0) others also positive in sorted list
+    for i in range(len(nums)):
+        if nums[i] > 0: # means that if first number positive (> 0) others also positive in sorted list
             break
-        if i > 0 and list[i] == list[i-1]: # current number is same as previous
+        if i > 0 and nums[i] == nums[i-1]: # current number is same as previous
             continue
-        pairs = pair_sum_sorted(list, i+1, -list[i])
+        pairs = pair_sum_sorted(nums, i+1, -nums[i])
 
         for pair in pairs:
-            triplets.append([list[i]] + pair)
+            triplets.append([nums[i]] + pair)
         
     return triplets
 
-def pair_sum_sorted(list, start:int, target:int):
+def pair_sum_sorted(nums:list, start:int, target:int):
     pairs = []
-    left, right = start, len(list)-1
+    left, right = start, len(nums)-1
     while left < right:
-        sum = list[left] + list[right]
+        sum = nums[left] + nums[right]
 
         if sum == target:
-            pairs.append([list[left], list[right]])
-            print(pairs)
-            while left < right and list[left] != list[left-1]:
+            pairs.append([nums[left], nums[right]])
+
+            while left < right and nums[left] == nums[left+1]: # look ahead if b has duplicates after adding pair 
                 left += 1
-                print(list[left])
+                print(nums[left])
+            left += 1
 
         elif sum < target: 
             left += 1
