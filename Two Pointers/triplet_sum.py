@@ -9,25 +9,30 @@ def triplet_sum(list):
         pairs = pair_sum_sorted(list, i+1, -list[i])
 
         for pair in pairs:
-            triplets.append(list[i] + pair)
+            triplets.append([list[i]] + pair)
         
     return triplets
 
 def pair_sum_sorted(list, start:int, target:int):
     pairs = []
-    left, right = 0, len(list)-1
+    left, right = start, len(list)-1
     while left < right:
         sum = list[left] + list[right]
-        if sum < target: 
-            left+=1
-        elif sum > target:
-            right -=1
+
+        if sum == target:
+            pairs.append([list[left], list[right]])
+            print(pairs)
+            while left < right and list[left] != list[left-1]:
+                left += 1
+                print(list[left])
+
+        elif sum < target: 
+            left += 1
         else:
-            while left < right and list[left] == list[left-1]:
-                left +=1
-                pairs.append([list[left], list[right]])
+            right -= 1
 
     return pairs
+
 
 list = [-1, 0, 1, 2, -1, -4]
 print(triplet_sum(list)) 
