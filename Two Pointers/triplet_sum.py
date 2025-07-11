@@ -21,6 +21,7 @@ def pair_sum_sorted(nums:list, start:int, target:int):
 
         if sum == target:
             pairs.append([nums[left], nums[right]])
+            print(pairs)
 
             while left < right and nums[left] == nums[left+1]: # look ahead if b has duplicates after adding pair 
                 left += 1
@@ -35,5 +36,5 @@ def pair_sum_sorted(nums:list, start:int, target:int):
     return pairs
 
 
-list = [-1, 0, 1, 2, -1, -4]
-print(triplet_sum(list)) 
+nums = [-1, -1, -1, 2, 2, 2]
+print(triplet_sum(nums)) 
