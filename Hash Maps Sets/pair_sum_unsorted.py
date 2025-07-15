@@ -8,5 +8,5 @@ def pair_sum_unsorted(nums: list[int], target: int):
 
     return []
 
-nums = [-1, 3, 4, 2]
+nums = [-1, 3, 4, 2, -6, 8]
 print(pair_sum_unsorted(nums, target = 3))        
