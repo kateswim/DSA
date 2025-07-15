@@ -1,4 +1,4 @@
-def pair_sum_sorted(list, target:int):
+def pair_sum_sorted(list, target: int):
     left, right = 0, len(list) - 1
     while left < right:
         sum = list[left] + list[right]
