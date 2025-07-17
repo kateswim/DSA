@@ -26,4 +26,15 @@ def zero_striping(matrix: list[list[int]]):
                 matrix[r][0] = 0
 
     # update submatrix using the markers in the first row/column
-    
+    for r in range(1, m):
+        for c in range(1, n):
+            if matrix[0][c] == 0 and matrix[r][0] == 0:
+                matrix[r][c] == 0
+
+    if first_row_has_zero:
+        for c in range(n):
+            matrix[0][c] == 0
+
+    if first_col_has_zero:
+        for r in range(m):
+            matrix[r][0] == 0
