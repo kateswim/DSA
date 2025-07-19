@@ -38,3 +38,15 @@ def zero_striping(matrix: list[list[int]]):
     if first_col_has_zero:
         for r in range(m):
             matrix[r][0] == 0
+
+
+matrix = [
+    [1, 2, 3, 4],
+    [5, 0, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+]
+
+matrix = zero_striping(matrix)
+print(matrix)
+
