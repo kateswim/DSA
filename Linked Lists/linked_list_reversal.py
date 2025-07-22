@@ -32,3 +32,18 @@ n3.next = n4
 head = n1
 reversed_head = linked_list_reversal(head)
 print_linked_list(reversed_head)
+
+
+def reverse_recursive(head: ListNode):
+    if (not head) or (not head.next):
+        return head
+
+    new_head = reverse_recursive(head.next)
+
+    next_node = node.next
+    node.next = prev
+    return new_head
+
+reversed_head = reverse_recursive(head)
+print_linked_list(reversed_head)
+
