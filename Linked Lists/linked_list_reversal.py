@@ -40,8 +40,8 @@ def reverse_recursive(head: ListNode):
 
     new_head = reverse_recursive(head.next)
 
-    next_node = node.next
-    node.next = prev
+    head.next.next = head
+    head.next = None
     return new_head
 
 reversed_head = reverse_recursive(head)
