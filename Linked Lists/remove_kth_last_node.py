@@ -20,3 +20,4 @@ def remove_kth_last_node(head: ListNode, k: int):
 
     trailer.next = trailer.next.next
     return dummy.next
+
