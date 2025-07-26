@@ -13,3 +13,10 @@ def remove_kth_last_node(head: ListNode, k: int):
         leader = leader.next
         if not leader:
             return head
+        
+    while leader.next:
+        trailer = trailer.next
+        leader = leader.next
+
+    trailer.next = trailer.next.next
+    return dummy.next
