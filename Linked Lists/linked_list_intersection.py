@@ -13,3 +13,5 @@ def linked_list_intersection(head_A: ListNode, head_B: ListNode):
         ptr_B = ptr_B.next if ptr_B else head_A
 
     return ptr_A
+
+
