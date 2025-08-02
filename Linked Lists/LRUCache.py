@@ -38,4 +38,10 @@ class LRUCache:
             self.remove_node(self.hashmap[key])
 
         node = DoublyLinkedListNode(key, value)
-        self.hashmap[key] = value
+        self.hashmap[key] = node
+
+        if len(self.hashmap) > self.capacity:
+            del self.hashmap[self.head.next.key]
+            self.remove_node(self.head.next)
+
+        self.add_to_tail(node)
