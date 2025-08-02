@@ -51,8 +51,12 @@ cache = LRUCache(3)
 
 cache.put(1, 300)
 cache.put(4, 340)
-cache.put(6, 900)
 cache.put(9, 500)
 
 print(cache.get(4))
+print(cache.get(9))
+
+cache.put(4, 400)
+cache.put(6, 900)
+
 print(cache.get(1))
