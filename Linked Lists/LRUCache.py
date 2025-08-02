@@ -37,4 +37,5 @@ class LRUCache:
         if key in self.hashmap:
             self.remove_node(self.hashmap[key])
 
-        
+        node = DoublyLinkedListNode(key, value)
+        self.hashmap[key] = value
