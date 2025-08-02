@@ -22,3 +22,11 @@ n1.next = n2
 n2.next = n3
 n3.next = n4
 
+m1 = ListNode(5)
+m1.next = n3  
+
+head_A = n1  # head of List A
+head_B = m1  # head of List B
+
+result = linked_list_intersection(head_A, head_B)
+print("\nIntersection at:", result.val if result else None)
