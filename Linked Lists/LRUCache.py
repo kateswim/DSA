@@ -8,7 +8,7 @@ class DoublyLinkedListNode:
 class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.hasmap = {}
+        self.hashmap = {}
         self.head = DoublyLinkedListNode(-1, -1)
         self.tail = DoublyLinkedListNode(-1, -1)
         self.head.next = self.tail
@@ -22,7 +22,7 @@ class LRUCache:
         self.tail.prev = node
 
     def remove_node(self, node: DoublyLinkedListNode):
-        node.prev.nexxt = node.next
+        node.prev.next = node.next
         node.next.prev = node.prev
 
     def get(self, key: int):
