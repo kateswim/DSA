@@ -29,4 +29,4 @@ head_A = n1  # head of List A
 head_B = m1  # head of List B
 
 result = linked_list_intersection(head_A, head_B)
-print("\nIntersection at:", result.val if result else None) # because function returns Node - result.val is like Node.val
+print("\nIntersection at:", result.val if result else None) # because function returns Node - result.val is Node.val
