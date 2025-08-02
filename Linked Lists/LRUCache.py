@@ -45,3 +45,14 @@ class LRUCache:
             self.remove_node(self.head.next)
 
         self.add_to_tail(node)
+
+
+cache = LRUCache(3)
+
+cache.put(1, 300)
+cache.put(4, 340)
+cache.put(6, 900)
+cache.put(9, 500)
+
+print(cache.get(4))
+print(cache.get(1))
