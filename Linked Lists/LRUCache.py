@@ -60,3 +60,5 @@ cache.put(4, 400)
 cache.put(6, 900)
 
 print(cache.get(1))
+
+

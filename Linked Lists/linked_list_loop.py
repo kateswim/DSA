@@ -24,7 +24,17 @@ def linked_list_loop(head: ListNode):
         slow = slow.next
         fast = fast.next.next
 
-    if slow == fast:
-        return True
+        if slow == fast:
+            return True
     
     return False
+
+
+node1 = ListNode(1)
+node2 = ListNode(2)
+node3 = ListNode(3)
+node4 = ListNode(4)
+
+node1.next = node2
+node2.next = node3
+node3.next = node4
