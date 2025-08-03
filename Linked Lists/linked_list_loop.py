@@ -38,3 +38,11 @@ node4 = ListNode(4)
 node1.next = node2
 node2.next = node3
 node3.next = node4
+
+head = node1
+
+node4.next = node2
+
+print(linked_list_loop_naive(head))
+
+print(linked_list_loop(head))
