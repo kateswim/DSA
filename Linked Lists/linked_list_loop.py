@@ -16,3 +16,10 @@ def linked_list_loop_naive(head: ListNode):
 
     return False
 
+
+def linked_list_loop(head: ListNode):
+    slow = fast = head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
